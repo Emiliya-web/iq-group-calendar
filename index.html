@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Calendar</title>
+</head>
+<body>
+    <div id="app">
+        <div class="app__header">
+            <div class="buttons">
+                <div class="modal modal_add">
+                    <button class="modal__close">
+                        <img src="img/cross.png" alt="Закрыть">
+                    </button>
+                    <input type="text" class="input modal__input" placeholder="5 марта, 14:00, День рождения">
+                    <button class="modal__btn">Создать</button>
+                </div>
+                <button class="buttons_add">Добавить</button>
+                <button class="buttons_refresh" onClick="window.location.reload()">Обновить</button>
+            </div>
+            <div class="placeholder">
+                <button type="button" id="search">
+                    <img src="img/search.png" alt="search">
+                </button>
+                <input class="input placeholder__input" type="text" placeholder="Placeholder">
+            </div>
+        </div>
+        <div class="app__main">
+            <div class="app__info">
+                <div class="app__month">
+                    <button  class="app__month_prev">
+                        <img src="img/month-prev.png" alt="Предыдущий месяц">
+                    </button>
+                    <div class="app__current-month"></div>
+                    <button class="app__month_next">
+                        <img src="img/month-next.png" alt="Следующий месяц">
+                    </button>
+                </div>
+                <button class="app__today" type="button" id="current">Сегодня</button>
+            </div>
+            <div class="app__days"></div>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>
